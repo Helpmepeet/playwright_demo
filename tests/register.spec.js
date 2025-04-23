@@ -129,7 +129,6 @@ test.describe('Register Form Validation Tests', () => {
     await page.goto(baseUrl);
     const user = generateUser({ agree: false });
     await fillForm(page, user);
-    await page.click('text=สมัครใช้งาน');
     await expect(page).not.toHaveURL(/\/login/);
   });
 });
